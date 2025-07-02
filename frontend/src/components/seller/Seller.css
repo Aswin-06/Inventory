@@ -1,0 +1,30 @@
+.seller-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: #222;
+}
+
+.seller-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.seller-buttons button {
+    background-color: #007bff;
+    border: none;
+    padding: 0.6rem 1.6rem;
+    font-size: 1rem;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.seller-buttons button:hover {
+    background-color: #0056b3;
+}

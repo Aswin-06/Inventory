@@ -1,0 +1,34 @@
+.aboutpro-container {
+    background-color: #ffffff;
+    padding: 1.5rem 2rem;
+    margin: 2rem auto;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+.aboutpro-container p,
+.aboutpro-container h3 {
+    text-transform: capitalize;
+    margin: 0.5rem 0;
+}
+
+.product-title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.product-description,
+.product-category,
+.product-quantity,
+.product-price {
+    font-size: 1rem;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #007bff;
+}

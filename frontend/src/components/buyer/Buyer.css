@@ -1,0 +1,27 @@
+.buyer-container {
+    padding: 1.5rem;
+    background-color: #f0f4f8;
+    min-height: 100vh;
+}
+
+.buyer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.buyer-buttons button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buyer-buttons button:hover {
+    background-color: #0056b3;
+}
