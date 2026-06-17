@@ -12,7 +12,7 @@ function Cart() {
     useEffect(() => {
         const fetch = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/api/cart/${id}`);
+                const response = await axios.get(`https://inventory-rnwg.onrender.com/api/cart/${id}`);
                 alteritems(response.data);
             } catch (error) {
                 console.log(error);
@@ -29,7 +29,7 @@ function Cart() {
     const buyItems = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.delete(`http://localhost:8080/api/cart/buy/${id}`);
+            const response = await axios.delete(`https://inventory-rnwg.onrender.com/api/cart/buy/${id}`);
             alert(response.data);
             navigate("/buyer");
         } catch (error) {

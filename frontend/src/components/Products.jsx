@@ -11,8 +11,8 @@ function Product() {
     useEffect(() => {
         const fetch = async () => {
             try {
-                const response = await axios.get("http://localhost:8080/api/item");
-                const res = await axios.get(`http://localhost:8080/api/user/${id}`);
+                const response = await axios.get("https://inventory-rnwg.onrender.com/api/item");
+                const res = await axios.get(`https://inventory-rnwg.onrender.com/api/user/${id}`);
                 alterrole(res.data.role);
                 alteritems(response.data);
             } catch (error) {

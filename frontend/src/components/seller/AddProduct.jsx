@@ -20,11 +20,11 @@ function AddProduct() {
             alert("Enter all the details");
         else {
             try {
-                const response = await axios.post("http://localhost:8080/api/item", item);
+                const response = await axios.post("https://inventory-rnwg.onrender.com/api/item", item);
                 const trans1 = { ...trans, itemid: response.data.id };
                 const trans2 = { ...trans1, quantity: item.quantity };
                 const trans3 = { ...trans2, userid: id };
-                await axios.post("http://localhost:8080/api/trans", trans3);
+                await axios.post("https://inventory-rnwg.onrender.com/api/trans", trans3);
                 navigate("/seller");
             } catch (error) {
                 alert(error.response.data);

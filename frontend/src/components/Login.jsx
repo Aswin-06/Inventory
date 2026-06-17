@@ -18,7 +18,7 @@ function Login() {
             alert("Fill all the details");
         else {
             try {
-                const response = await axios.post("http://localhost:8080/api/login", user);
+                const response = await axios.post("https://inventory-rnwg.onrender.com/api/login", user);
                 localStorage.setItem("id", response.data.id);
                 if (response.data.role === "buyer")
                     navigate("/buyer");

@@ -13,7 +13,7 @@ function AlterProduct()
     {
         const fetch=async () => {
             try {
-                const response= await axios.get(`http://localhost:8080/api/item/${id}`);
+                const response= await axios.get(`https://inventory-rnwg.onrender.com/api/item/${id}`);
                 alteritem(response.data);
             } catch (error) {
                 console.log(error);
@@ -35,7 +35,7 @@ function AlterProduct()
         else
         {
             try {
-                const response=await axios.put("http://localhost:8080/api/item",item);
+                const response=await axios.put("https://inventory-rnwg.onrender.com/api/item",item);
                 navigate(`/seller`);
             } catch (error) {
                 alert(error.response.data);

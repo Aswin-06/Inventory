@@ -16,7 +16,7 @@ function Buy() {
     useEffect(() => {
         const fetch = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/api/item/${id}`);
+                const response = await axios.get(`https://inventory-rnwg.onrender.com/api/item/${id}`);
                 alteritem(response.data);
             } catch (error) {
                 console.log(error);
@@ -36,8 +36,8 @@ function Buy() {
                 const buyitem = { ...item, quantity: item.quantity - quantity };
                 await alteritem(buyitem);
                 const trans3 = { ...trans, itemid: id, quantity, userid };
-                await axios.put("http://localhost:8080/api/item", buyitem);
-                await axios.post("http://localhost:8080/api/trans", trans3);
+                await axios.put("https://inventory-rnwg.onrender.com/api/item", buyitem);
+                await axios.post("https://inventory-rnwg.onrender.com/api/trans", trans3);
                 alert("Order placed Successfully");
                 navigate("/buyer");
             } catch (error) {
@@ -55,7 +55,7 @@ function Buy() {
         } else {
             try {
                 const cart3 = { ...cart, itemid: id, userid, quantity };
-                await axios.post("http://localhost:8080/api/cart", cart3);
+                await axios.post("https://inventory-rnwg.onrender.com/api/cart", cart3);
                 navigate("/buyer");
             } catch (error) {
                 console.log(error);

@@ -18,7 +18,7 @@ function Register() {
             alert("Fill all the details");
         else {
             try {
-                const response = await axios.post("http://localhost:8080/api/register", user);
+                const response = await axios.post("https://inventory-rnwg.onrender.com/api/register", user);
                 localStorage.setItem("id", response.data.id);
                 console.log(response.data);
                 if (user.role === "buyer")

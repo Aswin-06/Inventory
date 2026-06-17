@@ -12,7 +12,7 @@ function About() {
     useEffect(() => {
         const fetch = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/api/item/trans/${id}`);
+                const response = await axios.get(`https://inventory-rnwg.onrender.com/api/item/trans/${id}`);
                 alterorders(response.data);
             } catch (error) {
                 console.log(error);
@@ -31,7 +31,7 @@ function About() {
                 onClick={async (e) => {
                     e.preventDefault();
                     try {
-                        await axios.delete(`http://localhost:8080/api/trans/${order.id}`);
+                        await axios.delete(`https://inventory-rnwg.onrender.com/api/trans/${order.id}`);
                         navigate(0); // refresh page
                     } catch (error) {
                         console.log(error);
@@ -60,7 +60,7 @@ function About() {
                     onClick={async (e) => {
                         e.preventDefault();
                         try {
-                            await axios.delete(`http://localhost:8080/api/item/${id}`);
+                            await axios.delete(`https://inventory-rnwg.onrender.com/api/item/${id}`);
                             alert("Product Deleted successfully");
                             navigate("/seller");
                         } catch (error) {

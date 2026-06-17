@@ -10,7 +10,7 @@ function AboutPro() {
     useEffect(() => {
         const fetch = async () => {
             try {
-                const response = await axios.get(`http://localhost:8080/api/item/${id}`);
+                const response = await axios.get(`https://inventory-rnwg.onrender.com/api/item/${id}`);
                 alteritem(response.data);
             } catch (error) {
                 console.log(error);

@@ -10,7 +10,7 @@ function CartItem() {
     const removeFromCart = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.delete(`http://localhost:8080/api/cart/${id}`);
+            const response = await axios.delete(`https://inventory-rnwg.onrender.com/api/cart/${id}`);
             alert(response.data);
             navigate("/buyer");
         } catch (error) {
